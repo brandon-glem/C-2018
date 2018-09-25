@@ -79,8 +79,34 @@ void invertir(int arr[],int lend){
     }
 }
 
-int main()
-{
+int repetidos(char a[], char s){
+    int repeticiones=0;
+    for(int i=0; a[i] != '\0'; i++){
+        if(a[i] == s){
+            repeticiones++;
+        }
+    }
+    return repeticiones;
+}
+
+bool palindromo(char a[]){
+    int lend=0;
+    for(int i=0;a[i]!='\0';i++){
+        lend++;
+    }
+    int iguales=0,c=lend/2;
+    for(int i=0;i<=(lend/2);i++){
+        if(a[i]==a[lend-1]){
+            iguales++;
+        }
+    }
+    if(iguales==c)
+        return true;
+    return false;
+}
+
+int main(){
+
     int arr[]={4,6,2,9,65,43,87,12,6};
     int lend=9;
     cout<<suma(arr,lend)<<endl;
@@ -105,5 +131,13 @@ int main()
     }
     cout<<'\n';
 
+    char letra[]="comosabemosdetodo";
+    cout<<repetidos(letra,'o')<<endl;
+
+    char pal[]="ava";
+    if(palindromo(pal)==true)
+        cout<<"si"<<endl;
+    else
+        cout<<"no"<<endl;
     return 0;
 }
