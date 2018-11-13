@@ -92,15 +92,19 @@ class Animal{
             nombre = " ";
             nroPatas = 0;
         }
+
         Animal(string nomb, int patas){
             nombre = nomb;
             nroPatas = patas;
         }
-        void hacer_hablar(){
-            this->habla();
+
+        void mostrar_atributos(){
+            this->atributos();
         }
-        void habla(){
-            cout<<"hola"<<endl;
+
+        void atributos(){
+            cout<<"Mi nombre es: "<< nombre<<endl;
+            cout<<"Tengo: "<<nroPatas<<" patas"<<endl;
         }
 };
 
@@ -132,7 +136,7 @@ class AnimalArray
 
         void print(){
             for(int t=0;t<size;t++)
-                Animales[t].habla();
+                Animales[t].mostrar_atributos();
         }
 
         int getSize(){
@@ -163,35 +167,69 @@ class AnimalArray
 
 int main()
 {
-    perro p("spike",4,"pastor aleman");
-    p.hacer_hablar();
-    p.que_raza();
-    cout<<'\n';
+    int opcion;
+    cout<<"1 = Pregunta 1"<<endl;
+    cout<<"2 = Pregunta 2"<<endl;
+    cout<<"ingrese opcion: ";
+    cin>>opcion;
 
-    perro *ptp = &p;
-    ptp->hacer_hablar();
-    ptp->que_raza();
-    cout<<'\n';
+    if(opcion == 1){
+        perro p("spike",4,"pastor aleman");
+        p.hacer_hablar();
+        p.que_raza();
+        cout<<'\n';
 
-    gato g("mouse",4,"persa","corto");
-    g.hacer_hablar();
-    g.caracteristicas();
-    cout<<'\n';
+        perro *ptp = &p;
+        ptp->hacer_hablar();
+        ptp->que_raza();
+        cout<<'\n';
 
-    gato *ptg = &g;
-    ptg->hacer_hablar();
-    ptg->caracteristicas();
-    cout<<'\n';
+        gato g("mouse",4,"persa","corto");
+        g.hacer_hablar();
+        g.caracteristicas();
+        cout<<'\n';
 
-    loro l("juan",2,"papagayo","brasil");
-    l.hacer_hablar();
-    l.caracte();
-    cout<<'\n';
+        gato *ptg = &g;
+        ptg->hacer_hablar();
+        ptg->caracteristicas();
+        cout<<'\n';
 
-    loro *ptl = &l;
-    ptl->hacer_hablar();
-    ptl->caracte();
-    cout<<'\n';
+        loro l("juan",2,"papagayo","brasil");
+        l.hacer_hablar();
+        l.caracte();
+        cout<<'\n';
+
+        loro *ptl = &l;
+        ptl->hacer_hablar();
+        ptl->caracte();
+        cout<<'\n';
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if(opcion == 2){
+
+        Animal p("juan", 3);
+        Animal q("marcelo", 4);
+        Animal r("jhango", 2);
+        Animal arr[] = {p, q , r};
+        int size = sizeof(arr)/sizeof(arr[0]);
+
+        AnimalArray pa2(arr, size);
+
+        AnimalArray pa = pa2;
+
+        cout <<"el tamaño del arreglo es: "<<pa.getSize() << endl;
+
+        pa2.print();
+
+        Animal t("spike", 100);
+        cout<<'\n';
+
+        pa2.push_back(t);
+
+        pa2.print();
+    }
 
     return 0;
 }
