@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1541520842 source:c:\users\alumno-g\desktop\control\control\src\gato.cpp
+
+1541518082 c:\users\alumno-g\desktop\control\control\include\gato.h
+	<iostream>
+	"string.h"
+
+1541518171 source:c:\users\alumno-g\desktop\control\control\src\loro.cpp
+
+1541517611 c:\users\alumno-g\desktop\control\control\include\loro.h
+
+1541519514 source:c:\users\alumno-g\desktop\control\control\src\animal.cpp
+
+1541519417 source:c:\users\alumno-g\desktop\control\control\src\perro.cpp
+
+1541521312 source:c:\users\alumno-g\desktop\control\control\main.cpp
+	<iostream>
+	<string.h>
+
+1541519405 c:\users\alumno-g\desktop\control\control\include\animal.h
+
+1541519411 c:\users\alumno-g\desktop\control\control\include\perro.h
+	"string.h"
+	<iostream>
+	"animal.h"
+
+1541521314 source:h:\control\control\main.cpp
+	<iostream>
+	<string.h>
+
+1541519516 source:h:\control\control\src\animal.cpp
+
+1541520844 source:h:\control\control\src\gato.cpp
+
+1541518172 source:h:\control\control\src\loro.cpp
+
+1541519418 source:h:\control\control\src\perro.cpp
+
