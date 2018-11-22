@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1542730628 source:/root/Escritorio/Nueva carpeta/clases/main.cpp
+	<iostream>
+	"punto.h"
+	"vector.h"
+	"PointArray.h"
+
+1542730367 /root/Escritorio/Nueva carpeta/clases/include/punto.h
+
+1542730746 source:/root/Escritorio/Nueva carpeta/clases/src/punto.cpp
+	<iostream>
+	"punto.h"
+
+1540478148 source:/root/Escritorio/Nueva carpeta/clases/src/vector.cpp
+	"vector.h"
+	<iostream>
+	"punto.h"
+
+1540478140 /root/Escritorio/Nueva carpeta/clases/include/vector.h
+	"punto.h"
+
+1542730336 source:/root/Escritorio/Nueva carpeta/clases/src/PointArray.cpp
+	"PointArray.h"
+
+1542730336 /root/Escritorio/Nueva carpeta/clases/include/PointArray.h
+	"punto.h"
+
